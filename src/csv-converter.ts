@@ -5,7 +5,7 @@ import fs from 'fs';
  * @param filePath - The path to the CSV file.
  * @returns The content of the CSV file as a string.
  */
-const readCSVFile = (filePath: string): string => {
+export const readCSVFile = (filePath: string): string => {
   return fs.readFileSync(filePath, 'utf8');
 };
 
@@ -14,7 +14,7 @@ const readCSVFile = (filePath: string): string => {
  * @param csvContent - The content of the CSV file.
  * @returns An array where each element is a line from the CSV file.
  */
-const parseCSVContent = (csvContent: string): string[] => {
+export const parseCSVContent = (csvContent: string): string[] => {
   return csvContent.split('\n').filter(line => line.trim() !== '');
 };
 
@@ -23,7 +23,7 @@ const parseCSVContent = (csvContent: string): string[] => {
  * @param lines - An array of lines from the CSV file.
  * @returns A JSON string representing the CSV content.
  */
-const convertLinesToJSONString = (lines: string[]): string => {
+export const convertLinesToJSONString = (lines: string[]): string => {
   // Split the first line to get headers
   const headers = lines[0].split(',');
   // Map over the rest of the lines to create an array of objects
