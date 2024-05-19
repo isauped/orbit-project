@@ -47,9 +47,19 @@ import { parseCSV } from './src/csv-converter';
 const jsonResult = parseCSV('path/to/your/csvfile.csv');
 console.log(jsonResult);
 ```
+Alternatively, you can use the main.ts file, which is already set up to consume the sample.csv file provided by Vasily:
+
+```sh
+npm start
+```
 
 ## Running Tests
 This project uses Jest for testing. To run the tests, use the following command:
+
+```sh
+npm 
+```
+OR
 
 ```sh
 npx jest

@@ -1,5 +1,5 @@
 import { parseCSV, readCSVFile, parseCSVContent, convertLinesToJSONString } from '../src/csv-converter';
-import fs from 'fs';
+import * as fs from 'fs';
 
 describe('CSV to JSON Converter', () => {
   const exampleCSV = `name,age\nJohn,30\nJane,25`;

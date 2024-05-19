@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from 'fs';
 
 /**
  * Reads a CSV file from the given path.
