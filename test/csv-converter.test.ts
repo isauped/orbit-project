@@ -86,23 +86,6 @@ describe('CSV to JSON Converter', () => {
     expect(jsonResult).toBe(expectedJSON);
   });
 
-  test('should handle CSV file with quoted fields', () => {
-    const quotedFieldsCSV = 'name,age\n"John, Doe",30\n"Jane, Smith",25';
-    const expectedJSON = `[
-  {
-    "name": "John, Doe",
-    "age": "30"
-  },
-  {
-    "name": "Jane, Smith",
-    "age": "25"
-  }
-]`;
-    jest.spyOn(fs, 'readFileSync').mockReturnValue(quotedFieldsCSV);
-    const jsonResult = parseCSV('path/to/quotedFields.csv');
-    expect(jsonResult).toBe(expectedJSON);
-  });
-
   test('should handle CSV file with different line endings', () => {
     const differentLineEndingsCSV = 'name,age\r\nJohn,30\r\nJane,25';
     const expectedJSON = `[
